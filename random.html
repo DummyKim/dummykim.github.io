@@ -30,9 +30,36 @@
             </aside>
 
             <section id="main">
-                <h2>처음 화면</h2>
+
+              <h1>발표할 사람 뽑기</h1> <br>
+              <div class = "content">
+                 <div class = "box1">
+                    <h2>입력칸</h2>
+                    <br>
+                    <p>학급의 마지막 번호를 입력하세요.</P>
+                    <input type="number" id="numberInput">
+              <button onclick="pickRandomNumber()">발표자 뽑기!</button>
+              <p id="alert"></p>
+              </div>
+           
+              <div class = "box2">
+              <h2>뽑힌 번호</h2> <br>
+              <h1 id="result"></h1>
+              </div>
+           
+              <div class = "box3">
+                 <h2>지금까지 뽑힌 번호</h2> <br>
+                 <button onclick = "clearList()">모두 지우기</button> <br>
+           
+                 <div class = "list"></div>
+                    <ul id = "numberList"></ul>
+                 </div>
+              </div>
+
             </section>
         </div>
+
+        <script src="random-script.js"></script>
     </body>
 
 </html>
