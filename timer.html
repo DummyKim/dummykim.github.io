@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="kor">
+    <head>
+        <title>선생님 도구</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+<body>
+
+<div id="container">
+
+<!--헤더 및 상단 메뉴-->
+<header id="header">
+    <div id="title">
+    <h1>선생님 도구 Tools for Teachers</h1>
+    </div>
+    <div id="nav">
+        <a href="index.html" class="menu">처음 화면</a>
+        <a href="timer.html" class="menu">타이머</a>
+        <a href="stopwatch.html" class="menu">스톱워치</a>
+        <a href="random.html" class="menu">랜덤 발표자 뽑기</a>
+        <a href="wheel.html" class="menu">룰렛 돌리기</a>
+        <a href=# class ="menu">사다리 타기(제작중)</a>
+        <a href=# class ="menu">자리 정하기(제작중)</a>
+    </div>
+</header>
+
+<!--왼쪽 오른쪽 광고 칸-->
+<aside id="left">
+    왼쪽
+</aside>
+<aside id="right">
+    오른쪽
+</aside>
+
+
+<!--본 내용 들어가는 섹션-->
+<section id="main">
+    
+    <div class="timer-container">
+        <div class="title">
+            <h1>타이머</h1>
+            <p>분, 초를 입력하고 '입력' 버튼을 누른 후, '시작' 버튼을 눌러주세요.</p>
+        </div>
+        <div class="timer-input-container">
+            <input type="number" id="minutes" class = "timer-input" placeholder="분" min="0">
+            <input type="number" id="seconds" class = "timer-input" placeholder="초" min="0">
+            <button id="set-time" class="timer-btn">입력</button>
+        </div>
+        <div class="display-container">
+            <h1 id="timer-count">00:00</h1>
+        </div>
+        <div class="timer-buttons-container">
+            <button id="start" class="timer-btn">시작</button>
+            <button id="pause" class="timer-btn">일시 정지</button>
+            <button id="reset" class="timer-btn">초기화</button>
+        </div>
+    </div>
+    <audio id="alarm-sound" src="timer/alarm.wav" preload="auto"></audio>
+    <script src="timer/script.js"></script>
+
+</section>
+
+</div>
+</body>
+
+</html>
