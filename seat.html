@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자리 배치</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="container">
+
+        <!--헤더 및 상단 메뉴-->
+        <header id="header">
+            <div id="title">
+            <h1>선생님 도구 Tools for Teachers</h1>
+            </div>
+            <div id="nav">
+                <a href="index.html" class="menu">처음 화면</a>
+                <a href="timer.html" class="menu">타이머</a>
+                <a href="stopwatch.html" class="menu">스톱워치</a>
+                <a href="random.html" class="menu">랜덤 발표자 뽑기</a>
+                <a href="wheel.html" class="menu">룰렛 돌리기</a>
+                <a href="seat.html" class ="menu">자리 정하기</a>
+                <a href=# class ="menu">사다리 타기(제작중)</a>
+            </div>
+        </header>
+        
+        <!--왼쪽 오른쪽 광고 칸-->
+        <aside id="left">
+            <p style="color: white;">왼쪽</p> 
+        </aside>
+        <aside id="right">
+            <div id="counter" style="margin-top: 3px;">
+                <a href='http://www.freevisitorcounters.com'>at Freevisitorcounters.com</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=7b5fad4409071b693e3caf466b730f35b83a79ca'></script>
+                <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1190709/t/1"></script>
+            </div>
+        </aside>
+        
+        <!--본 내용 들어가는 섹션-->
+<section id="main">
+
+    <div class="seat-container">
+        <div class="seat-settings">
+          <fieldset class="seat-field">
+            <legend>학생 수, 열 갯수</legend>
+            <label for="seat-student-count">학생 수: </label>
+            <input type="number" id="seat-student-count" min="1"><br>
+            <label for="seat-columns">열 갯수: </label>
+            <input type="number" id="seat-columns" min="1">
+            <button onclick="generateInputs()">입력</button>
+          </fieldset>
+          <fieldset class="seat-field">
+            <legend>배열 방식</legend>
+            <select id="seat-layout" style="font-size: medium;">
+                <option value="single">한줄 책상 배열</option>
+                <option value="double">두줄 책상 배열</option>
+            </select>
+            <button id="seat-startBtn" onclick="assignSeats()">자리 배치 시작</button>
+            <br><br>
+            <div class="seat-radio-group">
+                <input type="radio" id="seat-screenOn" name="seat-screen" value="on" checked>
+                <label for="seat-screenOn">가림막 켜기</label>
+            </div>
+            <div class="seat-radio-group">
+                <input type="radio" id="seat-screenOff" name="seat-screen" value="off">
+                <label for="seat-screenOff">가림막 켜지 않기</label>
+            </div>
+          </fieldset>
+          <fieldset class="seat-field">
+            <legend>학생 번호,<br> 이름(수정가능)</legend>
+            <div id="seat-student-names"></div>
+          </fieldset>
+        </div>
+        <div class="seat-seating-chart">
+            <p>자리 배치 후, 두개의 자리를 클릭하면 서로 바꿀 수 있습니다.</p>
+            <table> <tr> <td class="seat-board"> <h2>칠판</h2> </td> </tr> </table>
+            <div id="seat-seating"></div>
+            <div id="seat-overlay" class="seat-overlay">
+                <audio id="seat-countdownAudio">
+                    <source src="seat/countdown.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+</div>
+
+
+    <script src="seat/script.js"></script>
+</body>
+</html>
