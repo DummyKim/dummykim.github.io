@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://dummykim.github.io/sitemap.xml
