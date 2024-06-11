@@ -57,7 +57,6 @@
                 <option value="single">한줄 책상 배열</option>
                 <option value="double">두줄 책상 배열</option>
             </select>
-            <button id="seat-startBtn" onclick="assignSeats()">자리 배치 시작</button>
             <br><br>
             <div class="seat-radio-group">
                 <input type="radio" id="seat-screenOn" name="seat-screen" value="on" checked>
@@ -74,7 +73,25 @@
           </fieldset>
         </div>
         <div class="seat-seating-chart">
-            <p>자리 배치 후, 두개의 자리를 클릭하면 서로 바꿀 수 있습니다.</p>
+            
+            <div id="seat-manualModal" class="seat-modal">
+                <div class="seat-modal-content">
+                    <span class="seat-close-btn">&times;</span>
+                    <p> 1) 전체 학생 수와 자리 열의 갯수를 쓴 뒤 '입력' 버튼을 누릅니다.</p>
+                    <p> 2) 학생 번호, 이름은 수정할 수 있습니다. 필요하면 학생의 이름을 입력해 주세요.</p>
+                    <p> 3) 책상 배열 방식과 가림막 사용 여부를 선택한 후, '자리 배치 시작' 버튼을 눌러 랜덤으로 자리를 배치합니다.</p>
+                    <p> ※ 자리 바꾸기 - 바꾸고자 하는 두 자리의 네모 체크박스를 클릭한 후 '자리 바꾸기' 버튼을 누르면 자리가 바뀝니다.</p>
+                    <p> ※ 자리 고정시키기 - 고정시키고자 하는 자리의 동그란 체크박스를 클릭한 후, '자리 배치 시작' 버튼을 다시 누르면 체크된 자리는 고정되고 나머지 자리만 랜덤하게 재배치됩니다.</p>
+                </div>
+            </div>
+
+            <div class="seat-function-box">
+                <button id="seat-manualBtn">설명서</button>
+
+                <button id="seat-startBtn"onclick="assignSeats()">자리 배치 시작</button>
+
+                <button id="seat-swapBtn">자리 바꾸기</button>
+            </div>
             <table> <tr> <td class="seat-board"> <h2>칠판</h2> </td> </tr> </table>
             <div id="seat-seating"></div>
             <div id="seat-overlay" class="seat-overlay">
