@@ -57,7 +57,7 @@ startBtn.addEventListener("click", function() {
     userDiv.style.alignItems = "center";
 
     const startButton = document.createElement("button");
-    startButton.textContent = "출발!";
+    startButton.textContent = "결과 보기";
     startButton.classList.add("ladder-start-user-btn");
     startButton.dataset.index = i;
     userDiv.appendChild(startButton);

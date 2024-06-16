@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="kor">
     <head>
-        <title>선생님 도구</title>
+        <title>타이머 - 선생님 도구</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="선생님들을 위한 간단한 도구들 - 교실 자리 정하기, 발표자 뽑기, 타이머 등">
@@ -9,7 +9,7 @@
         <meta property="og:title" content="선생님 도구 Tools 4 Teachers">
         <meta property="og:description" content="선생님들을 위한 간단한 도구들 - 교실 자리 정하기, 발표자 뽑기, 타이머 등">
         <meta property="og:url" content="https://tools4teacher.netlify.app">
-        <link rel="stylesheet" href="*.css">
+        <link rel="stylesheet" href="timer.css">
     </head>
 
 <body>
@@ -46,8 +46,28 @@
 
 <!--본 내용 들어가는 섹션-->
 <section id="main">
-    <h2>처음 화면</h2>
-
+    
+    <div class="timer-container">
+        <div class="title">
+            <h1>타이머</h1>
+            <p>분, 초를 입력하고 '입력' 버튼을 누른 후, '시작' 버튼을 눌러주세요.</p>
+        </div>
+        <div class="timer-input-container">
+            <input type="number" id="minutes" class = "timer-input" placeholder="분" min="0">
+            <input type="number" id="seconds" class = "timer-input" placeholder="초" min="0">
+            <button id="set-time" class="timer-btn">입력</button>
+        </div>
+        <div class="display-container">
+            <h1 id="timer-count">00:00</h1>
+        </div>
+        <div class="timer-buttons-container">
+            <button id="start" class="timer-btn">시작</button>
+            <button id="pause" class="timer-btn">일시 정지</button>
+            <button id="reset" class="timer-btn">초기화</button>
+        </div>
+    </div>
+    <audio id="alarm-sound" src="alarm.wav" preload="auto"></audio>
+    <script src="timer.js"></script>
 
 </section>
 

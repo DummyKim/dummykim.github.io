@@ -1,0 +1,87 @@
+/*전체 CSS*/
+
+* {  
+  margin:0;  /* 브라우저 기본 마진 리셋 */
+  padding:0;  /* 브라우저 기본 패딩 리셋 */
+  box-sizing: border-box;  /* 테두리까지 포함해서 박스 모델 너비로 계산 */
+}
+
+#container {
+  width:100%;   /* 내용 전체의 너비 */
+  margin:0px auto;  /* 내용을 화면 가운데 배치하도록 좌우 마진을 auto로 */
+}
+#header{
+  width:100%;  /* 부모 요소의 너비와 똑같게 */
+  height:15vh;  /* 헤더의 높이 */
+}
+#title{
+  height:10vh;
+  color:white;
+  background-color:#304b72;
+  padding-left:10%;
+  align-content: center;
+
+}
+#nav{
+ height:5vh;
+ padding-left:10%;
+ align-content: center;
+ box-shadow: 5px 5px 5px rgb(176, 176, 176);
+}
+.menu{
+  padding-right: 20px;
+  text-decoration:none;
+  color:black;
+}
+
+#left{
+  width:10%;  /* 사이드바의 너비 */
+  float:left;  /* 왼쪽으로 플로팅 */
+}
+#right{
+  width:10%;  /* 사이드바의 너비 */
+  float:right;  /* 왼쪽으로 플로팅 */
+}
+#main {
+  width:80%;  /* 본문의 너비 */
+  height:85vh;  /* 본문의 높이 */
+  padding-left:2vh; /*왼쪽 여백*/
+  padding-top:2vh; /*위쪽 여백*/
+  float:left;  /* 왼쪽으로 플로팅 */
+}
+
+
+/* timer CSS */
+
+.timer-container {
+font-family: Arial, sans-serif;
+justify-content: center;
+height: 100vh;
+text-align: center;
+}
+
+
+.timer-input-container, .timer-buttons-container {
+margin: 10px;
+}
+
+.timer-input {
+width: 80px;
+padding: 10px 20px;
+margin: 5px;
+font-size: large;
+}
+
+.timer-btn {
+padding: 10px 20px;
+margin: 5px;
+font-size: large;
+cursor: pointer;
+border-radius: 6px;
+
+}
+
+#timer-count {
+font-size: 200px;
+margin: 20px 0;
+}
