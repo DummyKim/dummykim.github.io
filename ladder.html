@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="kor">
     <head>
-        <title>스톱워치 - 선생님 도구</title>
+        <title>사다리 타기 - 선생님 도구</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="선생님들을 위한 간단한 도구들 - 교실 자리 정하기, 발표자 뽑기, 타이머 등">
@@ -47,14 +47,32 @@
 <!--본 내용 들어가는 섹션-->
 <section id="main">
 
-    <div class="SW-container">
-        <h1 class="title">스탑워치</h1>
-        <h1 id="SW-timerLabel">00:00:00</h1>
-        <input type="button" class="SW-myButton" onclick="start()" value="시작" id="startBtn">
-        <input type="button" class="SW-myButton" onclick="stop()" value="정지">
-        <input type="button" class="SW-myButton" onclick="reset()" value="초기화">
+  <div class="ladder-world">
+    <div class="ladder-count-con">
+      <h1>사다리 타기</h1><br>
+        <h2>참가 인원</h2><br>
+        <div class="ladder-count">
+            <input type="button" value="-" class="ladder-minus-btn" />
+            <p class="ladder-ladder-count"></p>
+            <input type="button" value="+" class="ladder-plus-btn" />
+        </div>
+        <button class="ladder-start-btn">시작</button>
     </div>
-    <script src="stopwatch/stopwatch-script.js"></script>
+    <div class="ladder-content">
+        <div class="ladder-function-btn ladder-con-dis">
+            <button class="ladder-next-btn">사다리 그리기</button>
+            <button class="ladder-result-btn">한번에 결과 보기</button>
+            <button class="ladder-reset-btn">다시 하기</button>
+        </div>
+        <div class="ladder-draw-con ladder-con-dis">
+            <div class="ladder-top-con"></div>
+            <canvas id="ladder-canvas" width="1000px" height="400px"></canvas>
+            <div class="ladder-bot-con"></div>
+        </div>
+    </div>
+    <div class="ladder-result"></div>
+</div>
+<script src="ladder/ladder.js"></script>
 
 </section>
 
