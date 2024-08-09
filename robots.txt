@@ -3,3 +3,7 @@ Allow: /
 Sitemap: https://dummykim.github.io/sitemap.xml
 
 #DaumWebMasterTool:ccbc83adad394a775e7062345f1fb5b2d667e61dada342516a2a81edeefb80ba:LFOWTunrrvry0YDa8sWCsg==
+
+User-agent: Google-adstxt
+
+Disallow:
